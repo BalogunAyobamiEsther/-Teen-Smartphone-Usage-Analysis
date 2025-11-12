@@ -1,7 +1,7 @@
 # -Teen-Smartphone-Usage-Analysis
 A MySQL-based analysis exploring how smartphone usage affects teenagers’ academic performance, mental health, and daily habits. The project models data into related tables to uncover patterns in addiction, sleep, and social media behavior.
 
-🎯 Project Goal
+##🎯 Project Goal
 
 The Teen Smartphone Usage Analysis project investigates how teenagers’ smartphone habits relate to their academic performance, mental health, and daily routines.
 It aims to uncover behavioral patterns such as:
@@ -12,7 +12,7 @@ The link between social media usage and self-esteem
 
 How gender influences smartphone addiction levels
 
-🗂️ Database Design
+##🗂️ Database Design
 Database Name
 
 Teensmartphone_Usage
@@ -52,7 +52,7 @@ Entity Relationship (ERD) Overview
 
 All supporting tables (Usage_Stats, Time_Distribution, Health_Profile, Performance_Profile) are connected to the main table Teenagers through one-to-one relationships using the ID field.
 
-🧠 Example Queries and Insights
+##🧠 Example Queries and Insights
 1️⃣ Average Addiction Level by Gender
 SELECT Gender, AVG(Addiction_Level) AS Avg_Addiction
 FROM Teenagers 
@@ -99,6 +99,6 @@ ORDER BY Sleep_Hours;
 
 Insight: More sleep generally correlates with higher academic performance.
 
-⚙️ Tool Used:
+##⚙️ Tool Used:
 
 MySQL Workbench — database creation, querying, and ERD.
