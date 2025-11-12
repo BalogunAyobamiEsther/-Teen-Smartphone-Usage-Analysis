@@ -12,7 +12,7 @@ The link between social media usage and self-esteem
 
 How gender influences smartphone addiction levels
 
-🗂️ Database Design
+## 🗂️ Database Design
 Database Name
 
 Teensmartphone_Usage
@@ -52,7 +52,7 @@ Entity Relationship (ERD) Overview
 
 All supporting tables (Usage_Stats, Time_Distribution, Health_Profile, Performance_Profile) are connected to the main table Teenagers through one-to-one relationships using the ID field.
 
-🧠 Example Queries and Insights
+## 🧠 Example Queries and Insights
 1️⃣ Average Addiction Level by Gender
 SELECT Gender, AVG(Addiction_Level) AS Avg_Addiction
 FROM Teenagers 
@@ -60,7 +60,7 @@ JOIN Performance_Profile ON Teenagers.ID = Performance_Profile.ID
 GROUP BY Gender;
 
 
-Insight: Female teenagers have a higher average addiction level (≈ 8.95).
+### Insight: Female teenagers have a higher average addiction level (≈ 8.95).
 
 2️⃣ Relationship Between Daily Usage and Academic Performance
 SELECT Usage_Stats.Daily_Usage_Hours, Performance_Profile.Academic_Performance
@@ -69,7 +69,7 @@ JOIN Performance_Profile ON Usage_Stats.ID = Performance_Profile.ID
 ORDER BY Usage_Stats.Daily_Usage_Hours DESC;
 
 
-Insight: Teenagers with >10 hours of daily phone usage tend to have moderate academic scores (55–75).
+### Insight: Teenagers with >10 hours of daily phone usage tend to have moderate academic scores (55–75).
 
 3️⃣ Comparison: Social Media vs Education Time
 SELECT Teenagers.Teen_Name, Time_Distribution.Time_on_Social_Media, Time_Distribution.Time_on_Education
@@ -77,7 +77,7 @@ FROM Teenagers
 JOIN Time_Distribution ON Teenagers.ID = Time_Distribution.ID;
 
 
-Insight: Most teens spend more time on social media than educational apps.
+### Insight: Most teens spend more time on social media than educational apps.
 
 4️⃣ Top 5 Teens by Addiction Level
 SELECT Teenagers.Teen_Name, Performance_Profile.Addiction_Level
@@ -87,7 +87,7 @@ ORDER BY Performance_Profile.Addiction_Level DESC
 LIMIT 5;
 
 
-Insight: The top 5 teens scored a perfect 10 on the addiction scale — indicating strong dependence.
+### Insight: The top 5 teens scored a perfect 10 on the addiction scale — indicating strong dependence.
 
 5️⃣ Sleep Hours vs Academic Performance
 SELECT Sleep_Hours, ROUND(AVG(Academic_Performance), 2) AS Avg_Academic_Score
@@ -97,8 +97,8 @@ GROUP BY Sleep_Hours
 ORDER BY Sleep_Hours;
 
 
-Insight: More sleep generally correlates with higher academic performance.
+### Insight: More sleep generally correlates with higher academic performance.
 
-⚙️ Tool Used:
+## ⚙️ Tool Used:
 
 MySQL Workbench — database creation, querying, and ERD.
